@@ -11,7 +11,7 @@ function LandingPage() {
 
       <div className="container" style={{ zIndex: 1 }}>
         <div className="row align-items-center min-vh-100">
-          <div className="col-lg-6 text-start pe-lg-5">
+          <div className="col-lg-6 text-center text-lg-start pe-lg-5">
             <span className="badge rounded-pill mb-3 pb-2 text-success fw-bold" style={{ backgroundColor: '#eaf4e7', padding: '8px 16px', letterSpacing: '1px' }}>🚀 THE FUTURE OF RECRUITMENT</span>
             <h1 className="display-4 fw-bolder mb-4" style={{ color: '#1f2937', letterSpacing: '-1px' }}>
               Hire Flow <br /> <span style={{ color: '#4d8360' }}>Interview Scheduling Platform</span>
@@ -20,7 +20,7 @@ function LandingPage() {
              A modern platform that connects students and HR professionals to manage interviews, track applications, and simplify the hiring process.
             </p>
 
-            <div className="d-flex gap-3">
+            <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
               <button
                 className="btn-auth-submit"
                 style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
@@ -37,7 +37,7 @@ function LandingPage() {
               </button>
             </div>
 
-            <div className="mt-5 d-flex gap-4 opacity-75">
+            <div className="mt-5 d-flex gap-4 opacity-75 justify-content-center justify-content-lg-start">
               <div>
                 <h3 className="fw-bolder mb-0 text-dark">500+</h3>
                 <span className="small text-muted fw-semibold">Companies trust us</span>

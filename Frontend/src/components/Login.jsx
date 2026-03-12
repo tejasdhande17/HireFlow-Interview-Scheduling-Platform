@@ -46,7 +46,7 @@ function Login({ onLogin }) {
               <input type="password" required className="auth-control" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
             </div>
             
-            <div className="d-flex justify-content-between align-items-center mb-5 small">
+            <div className="d-flex flex-wrap justify-content-between align-items-center mb-5 small gap-2">
               <div className="d-flex align-items-center">
                 <input type="checkbox" id="remember" className="me-2" style={{accentColor: '#5cb85c'}} />
                 <label htmlFor="remember" className="text-muted">Remember me</label>

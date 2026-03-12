@@ -103,12 +103,12 @@ function StudentDashboard({ onLogout }) {
 
         {activeTab === 'jobs' && (
           <div className="animate__animated animate__fadeIn">
-            <div className="d-flex justify-content-between align-items-center mb-4">
+            <div className="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-3">
               <h3 className="fw-bold mb-0">Latest Opportunities</h3>
-              <div className="w-50 d-flex justify-content-end">
+              <div className="d-flex justify-content-sm-end w-100" style={{ maxWidth: '400px' }}>
                 <input 
                   type="text" 
-                  className="form-control px-4 w-75" 
+                  className="form-control px-4 w-100" 
                   placeholder="Search job by name..." 
                   value={searchTerm} 
                   onChange={e => setSearchTerm(e.target.value)} 

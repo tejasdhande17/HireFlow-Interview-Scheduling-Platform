@@ -291,7 +291,7 @@ function HRDashboard({ onLogout }) {
                   <div className="col-md-4">
                     <input type="number" className="form-control" placeholder="Vacancies" required value={jobData.vacancies} onChange={e => setJobData({...jobData, vacancies: e.target.value})} />
                   </div>
-                  <div className="col-md-4 text-end d-flex gap-2">
+                  <div className="col-md-4 text-end d-flex gap-2 mt-3 mt-md-0">
                     {editingJobId && (
                       <button type="button" onClick={cancelEdit} className="btn btn-outline-secondary w-50 h-100">Cancel</button>
                     )}
@@ -364,7 +364,7 @@ function HRDashboard({ onLogout }) {
                     <option value="INTERVIEW_SCHEDULED">Interview Scheduled</option>
                   </select>
                 </div>
-                <div className="col-md-3 d-flex gap-2">
+                <div className="col-md-3 d-flex gap-2 mt-3 mt-md-0">
                   <button className="btn btn-dark w-50" onClick={() => fetchApplications(appSearch)}>Search</button>
                   <button className="btn btn-outline-secondary w-50" onClick={() => { setAppSearch({studentName:'', jobTitle:'', status:''}); fetchApplications({studentName:'', jobTitle:'', status:''}); }}>Reset</button>
                 </div>
@@ -468,7 +468,7 @@ function HRDashboard({ onLogout }) {
                     <option value="FAILED">Failed</option>
                   </select>
                 </div>
-                <div className="col-md-3 d-flex gap-2">
+                <div className="col-md-3 d-flex gap-2 mt-3 mt-md-0">
                   <button className="btn btn-dark w-50" onClick={() => fetchInterviews(invSearch)}>Search</button>
                   <button className="btn btn-outline-secondary w-50" onClick={() => { setInvSearch({candidateName:'', mode:'', status:''}); fetchInterviews({candidateName:'', mode:'', status:''}); }}>Reset</button>
                 </div>

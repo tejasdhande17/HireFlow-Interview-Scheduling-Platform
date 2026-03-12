@@ -63,9 +63,9 @@ function Register() {
               </select>
             </div>
             
-            <div className="d-flex align-items-center mb-4 small text-muted">
-              <input type="checkbox" id="terms" className="me-2" style={{accentColor: '#5cb85c', width: '16px', height: '16px'}} required />
-              <label htmlFor="terms">I agree to the Terms, Privacy Policy and Guidelines.</label>
+            <div className="d-flex align-items-start mb-4 small text-muted">
+              <input type="checkbox" id="terms" className="me-2 mt-1" style={{accentColor: '#5cb85c', width: '16px', height: '16px'}} required />
+              <label htmlFor="terms" style={{ lineHeight: '1.4' }}>I agree to the Terms, Privacy Policy and Guidelines.</label>
             </div>
             
             <button className="btn-auth-submit w-100 mt-2 mb-4" type="submit" disabled={loading}>

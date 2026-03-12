@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import api from '../api';
+import api, { authAPI } from '../api';
 
 function StudentDashboard({ onLogout }) {
   const [activeTab, setActiveTab] = useState('jobs');
@@ -57,6 +57,16 @@ function StudentDashboard({ onLogout }) {
 
   const user = JSON.parse(localStorage.getItem('user')) || { name: 'Student' };
 
+  const handleLogoutClick = async () => {
+    try {
+      await authAPI.logout();
+    } catch (err) {
+      console.error('Logout failed:', err);
+    } finally {
+      if (onLogout) onLogout();
+    }
+  };
+
   return (
     <div className="dashboard-layout">
       {/* Sidebar */}
@@ -88,7 +98,7 @@ function StudentDashboard({ onLogout }) {
           </li>
         </ul>
 
-        <button className="sidebar-logout" onClick={onLogout}>
+        <button className="sidebar-logout" onClick={handleLogoutClick}>
           <i className="bi bi-box-arrow-right me-3"></i>Logout
         </button>
       </div>

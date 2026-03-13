@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the compiled executable JAR file to the container
 # This assumes you have already run `mvn clean package` and the jar is in the target directory
-COPY target/*.jar app.jar
+COPY ./target/*.jar app.jar
 
 # Expose port 8080 (the default port for Spring Boot web applications)
 EXPOSE 8080

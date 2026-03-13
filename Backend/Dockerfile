@@ -1,12 +1,25 @@
-# Use Java 17 as the base image (matching the version in pom.xml)
+# Stage 1: Build the application
+FROM maven:3.9.6-eclipse-temurin-17-alpine AS builder
+
+# Set the working directory for the build stage
+WORKDIR /app
+
+# Copy the pom.xml and download dependencies
+COPY pom.xml .
+# Copy the source code
+COPY src ./src
+
+# Build the application
+RUN mvn clean package -DskipTests
+
+# Stage 2: Create the final lightweight image
 FROM eclipse-temurin:17-jre-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the compiled executable JAR file to the container
-# This assumes you have already run `mvn clean package` and the jar is in the target directory
-COPY ./target/*.jar app.jar
+# Copy the compiled executable JAR file from the builder stage
+COPY --from=builder /app/target/*.jar app.jar
 
 # Expose port 8080 (the default port for Spring Boot web applications)
 EXPOSE 8080

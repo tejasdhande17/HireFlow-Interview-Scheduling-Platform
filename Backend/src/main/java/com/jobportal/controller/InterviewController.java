@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/interviews")
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "${frontend.url}", allowCredentials = "true")
 @RequiredArgsConstructor
 public class InterviewController {
 
